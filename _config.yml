@@ -8,3 +8,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
+
+collections:
+  helps:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "helps"
+    values:
+      layout: "help"
