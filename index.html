@@ -5,7 +5,7 @@ layout: default
   {% for content in site.helps %}
     <li>
       <h2><a href="{{ content.url }}">{{ content.title }}</a></h2>
-      <p>{{ content.summary | markdownify }}</p>
+      <p>{{ content.description | markdownify }}</p>
     </li>
   {% endfor %}
 </ul>
