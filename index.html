@@ -4,7 +4,7 @@ layout: default
 <ul>
   {% for content in site.helps %}
     <li>
-      <h2><a href="{{ content.url }}">{{ content.title }}</a></h2>
+      <h2><a href="/help-hanaro-agency{{ content.url }}">{{ content.title }}</a></h2>
       <p>{{ content.description | markdownify }}</p>
     </li>
   {% endfor %}
