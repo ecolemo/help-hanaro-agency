@@ -17,6 +17,7 @@
     {% seo %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cute+Font&text=하나로비서">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -26,15 +27,14 @@
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <header class="page-header" role="banner">
+    <header class="page-header landing" role="banner">
       <nav class="navbar text-center">
-          <a href="/" class="navbar-brand mr-auto text-info mt-2"><strong class="text-logo" style="font-size: 2em;">하나로비서 도움말</strong></a>
+          <a href="/" class="navbar-brand mr-auto text-info mt-2"><strong class="text-logo" style="font-size: 2em;">하나로비서</strong></a>
       </nav>
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
+      <div class="jumbotron pb-0 pb-md-5" style="background: none">
+        <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      </div>
     </header>
 
     <main id="content" class="main-content" role="main">
