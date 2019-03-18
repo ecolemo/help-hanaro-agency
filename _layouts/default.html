@@ -29,7 +29,11 @@
 
     <header class="page-header landing" role="banner">
       <nav class="navbar text-center">
+      {% if jekyll.environment == "production" %}
+          <a href="/help-hanaro-agency/" class="navbar-brand mr-auto text-info mt-2"><strong class="text-logo" style="font-size: 2em;">하나로비서</strong></a>
+      {% else %}
           <a href="/" class="navbar-brand mr-auto text-info mt-2"><strong class="text-logo" style="font-size: 2em;">하나로비서</strong></a>
+      {% endif %}
       </nav>
       <div class="jumbotron pb-0 pb-md-5" style="background: none">
         <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>

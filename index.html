@@ -4,7 +4,11 @@ layout: default
 <ul>
   {% for content in site.helps %}
     <li>
-      <h2><a href="/help-hanaro-agency{{ content.url }}">{{ content.title }}</a></h2>
+      {% if jekyll.environment == "production" %}
+        <h2><a href="/help-hanaro-agency{{ content.url }}">{{ content.title }}</a></h2>
+      {% else %}
+        <h2><a href="{{ content.url }}">{{ content.title }}</a></h2>
+      {% endif %}
       <p>{{ content.description | markdownify }}</p>
     </li>
   {% endfor %}
