@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-<ul>
+<ul style='list-style-type: none'>
   {% for content in site.helps %}
     <li>
       {% if jekyll.environment == "production" %}
-        <h2><a href="/help-hanaro-agency{{ content.url }}">{{ content.title }}</a></h2>
+        <h2><a href="/help-hanaro-agency{{ content.url }}" class="text-primary">{{ content.title }}</a></h2>
       {% else %}
-        <h2><a href="{{ content.url }}">{{ content.title }}</a></h2>
+        <h2><a href="{{ content.url }}" class="text-primary">{{ content.title }}</a></h2>
       {% endif %}
       <p>{{ content.description | markdownify }}</p>
     </li>
