@@ -1,22 +1,26 @@
-url: help.hanaro.agency
 title: 하나로비서 도움말
 description: 하나로비서의 고객을 위한 도움말 페이지입니다.
-show_downloads: false
-google_analytics:
-theme: jekyll-theme-cayman
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://help.hanaro.agency"
+
+permalink: pretty
+exclude: ["vendor", "node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
+
+# Enable or disable the site search
+search_enabled: true
+
+# Aux links for the upper right navigation
+aux_links:
+  "하나로비서":
+    - "https://hanaro.agency"
+
+# Color scheme currently only supports "dark" or nil (default)
+color_scheme: nil
+
+# Google Analytics Tracking 
+ga_tracking: UA-135900340-1
 
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
-
-collections:
-  helps:
-    output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: "helps"
-    values:
-      layout: "help"

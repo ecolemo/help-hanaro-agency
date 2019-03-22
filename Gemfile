@@ -1,7 +1,5 @@
-source 'https://rubygems.org'
-
-gem 'jekyll'
-gem 'jekyll-theme-cayman'
+source "https://rubygems.org"
+gemspec
 
 group :jekyll_plugins do
     gem 'jekyll-sitemap'

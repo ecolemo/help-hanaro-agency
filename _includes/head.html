@@ -1,0 +1,37 @@
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cute+Font&text=하나로비서">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  {% if page.description %}
+  <meta name="Description" content="{{ page.description }}">
+  {% endif %}
+
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/just-the-docs.css" | absolute_url }}">
+
+  {% if site.ga_tracking != nil %}
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', '{{ site.ga_tracking }}', '{{ site.url }}');
+      ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+  {% endif %}
+
+  {% if site.search_enabled != nil %}
+    <script type="text/javascript" src="{{ "/assets/js/vendor/lunr.min.js" | absolute_url }}"></script>
+  {% endif %}
+  <script type="text/javascript" src="{{ "/assets/js/just-the-docs.js" | absolute_url }}"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% feed_meta %}
+  {% seo %}
+
+</head>
