@@ -1,7 +1,7 @@
 title: 하나로비서 도움말
 description: 하나로비서의 고객을 위한 도움말 페이지입니다.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://help.hanaro.agency"
+url: "https://help.hanaro.agency"
 
 permalink: pretty
 exclude: ["vendor", "node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
