@@ -10,16 +10,9 @@
             {% endif %}
             <a href="{{ node.url | absolute_url }}" class="navigation-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
 
-            {% if page.url == node.url and node.toc %}
-              <ul class="navigation-list-child-list ">
-                {% for child in node.toc %}
-                  <li class="navigation-list-item">
-                    <a href="#{{ child | slugify }}" class="navigation-list-link">{{ child }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
+            {% if page.url == node.url %}
+              {% include toc.html html=content class="navigation-list-child-list" item_class="navigation-list-item" anchor_class="navigation-list-link" h_max=3 %}
             {% endif %}
-
           </li>
         {% endif %}
       {% endunless %}
