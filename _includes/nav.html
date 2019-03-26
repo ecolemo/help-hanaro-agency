@@ -11,7 +11,9 @@
             <a href="{{ node.url | absolute_url }}" class="navigation-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
 
             {% if page.url == node.url %}
-              {% include toc.html html=content class="navigation-list-child-list" item_class="navigation-list-item" anchor_class="navigation-list-link" h_max=3 %}
+              {% if node.toc_min %}{% assign toc_min = node.toc_min %}{% else %}{% assign toc_min = 2 %}{% endif %}
+              {% if node.toc_max %}{% assign toc_max = node.toc_max %}{% else %}{% assign toc_max = 3 %}{% endif %}
+              {% include toc.html html=content class="navigation-list-child-list" item_class="navigation-list-item" anchor_class="navigation-list-link" h_min=toc_min h_max=toc_max %}
             {% endif %}
           </li>
         {% endif %}
