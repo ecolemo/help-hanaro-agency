@@ -20,11 +20,7 @@ color_scheme: nil
 # Google Analytics Tracking 
 ga_tracking: UA-135900340-1
 
-toc:
-  min_level: 2 # default: 1
-
 plugins:
-  - jekyll-toc
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
