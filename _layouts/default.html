@@ -56,6 +56,11 @@
           {% endif %}
         {% endunless %}
         <div id="main-content" class="page-content" role="main">
+          <nav>
+            <h2 class="text-delta">Table of Contents</h2>
+            {% include toc.html html=content %}
+            <hr>
+          </nav>
           {{ content }}
 
         </div>
